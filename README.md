@@ -17,3 +17,8 @@ Bu proje; ham dizüstü bilgisayar verilerini temizleyerek, makine öğrenmesi (
 * **Görselleştirme:** Matplotlib, Seaborn
 * **Makine Öğrenmesi:** Scikit-Learn
 * **Arayüz / Dağıtım:** Gradio / Ipywidgets (Colab)
+
+## 📂 Veri Seti (Dataset)
+Bu projede kullanılan dizüstü bilgisayar fiyatları veri seti **Kaggle** platformundan temin edilmiştir. 
+* **Kaynak:** [Kaggle - Laptop Price Dataset](https://www.kaggle.com/datasets/muhammetvarl/laptop-price)
+* **İçerik:** Çeşitli markalara ait dizüstü bilgisayarların donanım özellikleri (RAM, CPU, GPU, Ekran Boyutu vb.) ve fiyat(€ cinsinden) bilgilerini içermektedir.
