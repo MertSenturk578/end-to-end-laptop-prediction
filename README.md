@@ -21,4 +21,4 @@ Bu proje; ham dizüstü bilgisayar verilerini temizleyerek, makine öğrenmesi (
 ## 📂 Veri Seti (Dataset)
 Bu projede kullanılan dizüstü bilgisayar fiyatları veri seti **Kaggle** platformundan temin edilmiştir. 
 * **Kaynak:** [Kaggle - Laptop Price Dataset](https://www.kaggle.com/datasets/sohaibdevv/modern-laptops-hardware-and-pricing-dataset-2026)
-* **İçerik:** Çeşitli markalara ait dizüstü bilgisayarların donanım özellikleri (RAM, CPU, GPU, Ekran Boyutu vb.) ve fiyat(€ cinsinden) bilgilerini içermektedir.
+* **İçerik:** Çeşitli markalara ait dizüstü bilgisayarların donanım özellikleri (RAM, CPU, GPU, Ekran Boyutu vb.) ve fiyat bilgilerini içermektedir.
