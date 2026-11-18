@@ -1,22 +1,28 @@
 # 💻 End-to-End Laptop Price Prediction & Smart Advisor
 
-Bu proje; ham dizüstü bilgisayar verilerini temizleyerek, makine öğrenmesi (regresyon) modelleriyle piyasa fiyatını tahmin eden ve kullanıcıya akıllı donanım önerileri sunan web tabanlı interaktif bir uçtan uca veri bilimi uygulamasıdır.
+Bu proje; ham dizüstü bilgisayar verilerini temizleyerek, makine öğrenmesi (**XGBoost**) modelleriyle piyasa fiyatını tahmin eden, **Gradio** ile interaktif web arayüzüne kavuşturulmuş uçtan uca bir veri bilimi uygulamasıdır.
 
 ## 🚀 Proje Aşamaları ve Akışı
-1. **Problem Tanımı:** Donanım özelliklerine göre bilgisayar fiyatını tahmin etme (Regresyon).
-2. **Veri Toplama ve Hazırlama:** ~1.300 satırlık veri setinin temizlenmesi, eksik değerlerin giderilmesi ve sayısal dönüşümler.
-3. **Keşifçi Veri Analizi (EDA) ve Görselleştirme:** Fiyat trendlerinin ve özellik ilişkilerinin incelenmesi.
-4. **Model Kurma ve Eğitme:** Scikit-Learn ile regresyon modellerinin eğitilmesi ve başarım ölçümü ($R^2$ skoru).
-5. **Tahmin ve Değerlendirme:** Test verileri üzerinden modelin dürüstçe test edilmesi.
-6. **Akıllı Tahmin ve Öneri Aracı (Arayüz):** Kullanıcı dostu arayüz ile anlık fiyat tahmini ve alternatif konfigürasyon önerileri.
+
+1. **Problem Tanımı:** Donanım özelliklerine göre bilgisayar piyasa fiyatını tahmin etme (Regresyon).
+2. **Veri Toplama ve Hazırlama:** Kaggle veri setinin temizlenmesi, eksik değerlerin giderilmesi ve sayısal dönüşümler.
+3. **Veri Güvenliği & Sızıntı Önleme (Data Leakage Prevention):** Modelin ezber yapmasını önlemek ve gerçekçi sonuçlar üretmek amacıyla fiyatı doğrudan ele verebilecek sızıntı yaratabilecek sütunlar temizlenmiştir.
+4. **Model Kurma ve Eğitme:** **XGBoost Regressor** kullanılarak modelin eğitilmesi ve **%87.3 $R^2$ skoru** ile başarılı başarım ölçümü.
+5. **Akıllı Donanım Analizi ve Otomasyon:** Seçilen GPU ve donanımlara göre performans seviyesinin (`Performance_Level` - Tier) sistem tarafından otomatik olarak tespit edilmesi.
+6. **Akıllı Tahmin ve Arayüz (Gradio):** Kullanıcı dostu Gradio web arayüzü ile anlık fiyat tahmini ve detaylı teknik raporlama.
 7. **Dokümantasyon:** Kod, sunum ve rapor üçlüsüyle eksiksiz teslim.
 
 ## 🛠️ Teknik Altyapı ve Kullanılan Araçlar
+
 * **Dil:** Python
 * **Veri İşleme:** Pandas, NumPy
-* **Görselleştirme:** Matplotlib, Seaborn
-* **Makine Öğrenmesi:** Scikit-Learn
-* **Arayüz / Dağıtım:** Gradio / Ipywidgets (Colab)
+* **Makine Öğrenmesi & Algoritma:** Scikit-Learn, XGBoost Regressor
+* **Arayüz / Dağıtım:** Gradio (Web Demosu)
+
+## 📊 Model Mimarisi ve Doğrulama
+
+Veri setinin boyutu göz önünde bulundurularak aşırı öğrenmeyi (overfitting) engellemek amacıyla dengeli (%80 Eğitim, %20 Test) kullanılmıştır; XGBoost algoritmasının doğal boosting mekanizmasıyla yüksek genelleme başarısına ulaşılmıştır.
+
 
 ## 📂 Veri Seti (Dataset)
 Bu projede kullanılan dizüstü bilgisayar fiyatları veri seti **Kaggle** platformundan temin edilmiştir. 
